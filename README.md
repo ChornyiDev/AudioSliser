@@ -2,6 +2,10 @@
 
 A Flask-based service that extracts audio from video files and optionally trims them to a maximum size of 10MB.
 
+## Repository
+
+[https://github.com/ChornyiDev/AudioSliser.git](https://github.com/ChornyiDev/AudioSliser.git)
+
 ## Requirements
 
 - Python 3.8+
@@ -9,7 +13,13 @@ A Flask-based service that extracts audio from video files and optionally trims 
 
 ## Installation
 
-1. Install ffmpeg:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ChornyiDev/AudioSliser.git
+   cd AudioSliser
+   ```
+
+2. Install ffmpeg:
 
    - **Ubuntu/Debian:**
      ```bash
@@ -27,7 +37,7 @@ A Flask-based service that extracts audio from video files and optionally trims 
      brew install ffmpeg
      ```
 
-2. Install Python dependencies:
+3. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -126,5 +136,15 @@ All temporary files are automatically cleaned up, even in case of errors.
    }
    ```
 
-All these files will help you properly deploy and manage the service on a server.
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the MIT License.
 ```
