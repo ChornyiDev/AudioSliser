@@ -43,7 +43,13 @@ def process_video():
             as_attachment=True,
             download_name='output_audio.mp3'
         )
-
+        
+        # Include the file name in the response
+        response_data = {
+            "message": "File processed successfully",
+            "file_name": 'output_audio.mp3'
+        }
+        
         # Clean up after sending response
         @response.call_on_close
         def cleanup():
@@ -55,7 +61,7 @@ def process_video():
                 except Exception as e:
                     print(f"Error cleaning up {file_path}: {str(e)}")
 
-        return response
+        return jsonify(response_data), 200  # Return JSON response with file name
 
     except Exception as e:
         # Clean up files if there's an error
